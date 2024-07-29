@@ -4,26 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Image Slider</title>
 </head>
 <body>
-    <h1>Image Slider</h1>
+    <script src="script.js"></script>
+    <!--image slider starts-->
     <div class="slide-container">
         <div class="slides">
-            <img src="colosseum.jpg" alt="colosseum img">
-            <img src="petra.jpg" alt="petra img">
-            <img src="Chichen-Itza.jpg" alt="Chichen-Itza img">
-            <img src="Christ-The-Redemeer.jpg" alt="Christ-The-Redemeer img">
-            <img src="MACHU-PICCHU.jpg" alt="MACHU-PICCHU img">
-            <img src="Taj-Mahal.jpg" alt="Taj-Mahal img">
-            <img src="Great-Wall-Of-China.jpg" alt="Great-Wall-Of-China img">
+            <img class="slide" src="colosseum.jpg" alt="colosseum img">
+            <img class="slide" src="petra.jpg" alt="petra img">
+            <img class="slide" src="Chichen-Itza.jpg" alt="Chichen-Itza img">
+            <img class="slide" src="Christ-The-Redemeer.jpg" alt="Christ-The-Redemeer img">
+            <img class="slide" src="MACHU-PICCHU.jpg" alt="MACHU-PICCHU img">
+            <img class="slide" src="Taj-Mahal.jpg" alt="Taj-Mahal img">
+            <img class="slide" src="Great-Wall-Of-China.jpg" alt="Great-Wall-Of-China img">
+        </div>
+        <!--navigation button starts-->
+        <div>
+            <button class="prev-button" onclick="prevSlide()">&lt;</button>
+            <button class="next-button" onclick="nextSlide()">&gt;</button>
+        </div>
+        <!--navigation button ends-->   
+    
+           
             
         
+         
 
 
 
-
-        </div>
+    
+         <!--image slider ends-->
     </div>
 </body>
 </html>
