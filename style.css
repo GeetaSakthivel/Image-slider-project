@@ -1,23 +1,36 @@
-body{
-  background-color: #F2C3DE;
+/*styling the body of webpage */
+*{
   padding: 0; 
   margin: 0;
+  background-color: #F2C3DE;
+  box-sizing: border-box;
 }
+/*styling the h1 tag*/
+.heading{
+  text-align: center;
+  padding:5px 0 7px 0;
+  font-family:'Lucida Sans';
+}
+/* Main container styling */
 .slider {
   position: relative;
     width: 70%;
     height:500px;
     margin: auto;
+    border: 2px solid #ddd;
+    border-radius: 20px;
     overflow: hidden;
-    margin-top: 45px;
   }
- .slider img{
+  /*slides container styling*/
+  .slides{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  /*styling each images of the style container*/
+ .slides img{
   width: 100%;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
  }
+ /*styling the  navigation buttons*/
  .slider button{
   position: absolute;
   top:50%;
@@ -25,18 +38,17 @@ body{
   font-size: 2rem;
   padding:12px 15px;
   background-color: hsla(0, 0%, 0%, 0.5);
-  color: white;
   border: none;
+  color: white;
   cursor: pointer;
+  z-index: 5;
  }
- .prev-btn{
-  left: 10px;
+  /* Positioning the previous button on the left */
+ .prev{
+  left: 10px; 
  }
- .next-btn{
-  right: 10px;
- }
- @keyframes fade{
-  from {opacity: .5}
-  to{opacity: 1;}
+  /*positioning the next button on the right */
+ .next{
+  right:10px;
  }
  

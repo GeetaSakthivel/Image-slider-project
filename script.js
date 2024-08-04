@@ -1,40 +1,38 @@
 //Image Slider
-//Selecting slides and buttons
-document.addEventListener('DOMContentLoaded', () => {
-    const slider = document.querySelector('.slider');
-    const prevButton = document.querySelector('.prev-button');
-    const nextButton = document.querySelector('.next-button');
+//selecting slides
+document.addEventListener('DOMContentLoaded', ( showSlide) => {
+    const slides= document.querySelector(".slides");
+    const images=document.querySelectorAll(".slides img");
 
-    let currentIndex = 0;
+//selecting buttons
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+    
+  let slideIndex=0;
 
-    function showSlide(index) {
-      const slideWidth = slider.clientWidth;
-      slider.style.transform = `translateX(-${index * slideWidth}px)`;
+  function showSlide(index) {
+    if(index>=images.length){
+        slideIndex=0;
     }
-    function showFirstSlide() {
-        currentIndex = 0;
-        showSlide(currentIndex);
-      }
+    else if(index<0){
+        slideIndex=images.length -1;
+    }
+    else{
+        slideIndex=index;
+    }
+    slides.style.transform = `translateX(${-slideIndex * 100}%)`;     
+  }
+function prevSlide(){
+    slideIndex--;
+    showSlide(slideIndex);
+}
+function nextSlide(){
+    slideIndex++;
+    showSlide(slideIndex);
+}
+prev.addEventListener('click', (prevSlide) => showSlide(slideIndex - 1));
+next.addEventListener('click', (nextSlide) => showSlide(slideIndex + 1));
 
-      prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : slider.children.length - 1;
-        showSlide(currentIndex);
-      });
-
-      nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex < slider.children.length - 1) ? currentIndex + 1 : 0;
-        showSlide(currentIndex);
-      });
-
-      window.addEventListener('resize', () => showSlide(currentIndex));
-
-      // Display the first image when the page loads
-      showFirstSlide();
-    });
-
-
-
-
-
-
-
+//Auto-slide 
+setInterval(()=>showSlide(slideIndex+1),5000);
+});
