@@ -34,5 +34,5 @@ prev.addEventListener('click', (prevSlide) => showSlide(slideIndex - 1));
 next.addEventListener('click', (nextSlide) => showSlide(slideIndex + 1));
 
 //Auto-slide 
-setInterval(()=>showSlide(slideIndex+1),5000);
+setInterval(()=>showSlide(slideIndex+1),3000);
 });
