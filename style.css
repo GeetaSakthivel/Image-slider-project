@@ -1,21 +1,20 @@
 /*styling the body of webpage */
-*{
-  padding: 0; 
-  margin: 0;
-  background-color: #F2C3DE;
+body{
+  padding: 0%;
+  margin: 0%;
+  height: 100vh;
+  background-color:rgb(174, 197, 197);
   box-sizing: border-box;
 }
 /*styling the h1 tag*/
 .heading{
   text-align: center;
-  padding:5px 0 7px 0;
   font-family:'Lucida Sans';
 }
 /* Main container styling */
-.slider {
+.slide-container {
   position: relative;
     width: 70%;
-    height:500px;
     margin: auto;
     border: 2px solid #ddd;
     border-radius: 20px;
@@ -28,10 +27,14 @@
   }
   /*styling each images of the style container*/
  .slides img{
+  min-width: 100%;
+  transition: opacity 1s;
+  /* Ensure images are responsive */
   width: 100%;
+  height: auto;
  }
  /*styling the  navigation buttons*/
- .slider button{
+ .prev,.next{
   position: absolute;
   top:50%;
   transform: translateY(-50%);
@@ -41,14 +44,27 @@
   border: none;
   color: white;
   cursor: pointer;
-  z-index: 5;
+  z-index: 5;  /* Ensure buttons are on top */
  }
   /* Positioning the previous button on the left */
  .prev{
-  left: 10px; 
+  left: 3%; 
  }
   /*positioning the next button on the right */
  .next{
-  right:10px;
+  right:3%;
  }
+ /*Making image slider responsive*/
+ @media (max-width: 600px) {
+  .slider{
+      width: 100%;
+      border: none;
+  }
+  
+  .prev, .next {
+      padding: 5px;
+      font-size: 14px;
+  }
+}
+
  
