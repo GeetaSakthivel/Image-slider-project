@@ -1,7 +1,8 @@
 # Image-slider-project
 
 ## Project Description
-Welcome to my project!This is a Image Slider project made purely with HTML,CSS,Javascript.It allows users to navigate through a series of images using "Next" and "previous" buttons,additionally it also supports automatic slideshow functionality.
+Welcome to my project! 
+This is a Image Slider project made purely with HTML,CSS,Javascript.It allows users to navigate through a series of images using "Next" and "previous" buttons,additionally it also supports automatic slideshow functionality.
 
 ##How to run
 1.Clone the repository or download the project files.
