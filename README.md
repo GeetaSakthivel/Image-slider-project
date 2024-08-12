@@ -6,7 +6,7 @@ This is a Image Slider project made purely with HTML,CSS,Javascript.It allows us
 
 ##How to run
 1.Clone the repository or download the project files.
-2.Open `index.html` in your web browser.
+2.Open `index.html` with live server.
 
 ##features
 => Navigate through images using buttons.
